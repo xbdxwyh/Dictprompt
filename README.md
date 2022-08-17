@@ -1,5 +1,5 @@
-# Dictprompt
-Implementation of paper: [DictPrompt: How dictionary help pre-training when integrating prompt-learning]()
+# DictPrompt
+Implementation of paper: [DictPrompt: How Dictionary Helps Pre-training When Integrating Prompt-learning]()
 
 ## TL;DR
 We propose a generalized dictionary-based additional pre-training method using the prompt learning method.
