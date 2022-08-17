@@ -12,6 +12,8 @@ An illustration of DictPrompt pipeline.
 ![DictPrompt pipeline](fig/fig2_model_pipeline.jpg "An illustration of DictPrompt pipeline.")
 
 ## Results in our paper:
+Besides comparing the model after DictPrompt tuning with the vanilla models, we also compare with the following related PLM optimizing works: (1) SemPre<sup><a href="#ref1">1</a></sup>, (2) ElitePLM<sup><a href="#ref2">2</a></sup>, (3) GenDef<sup><a href="#ref3">3</a></sup>, (4) Knowledge-BERT<sup><a href="#ref4">4</a></sup>, (5) P-tuning<sup><a href="#ref5">5</a></sup>, (6) P-tuning V2<sup><a href="#ref6">6</a></sup>.
+
 |               | Model                 | WiC              | WSC              | SM               | SMR              | HS               |
 |---------------|-----------------------|------------------|------------------|------------------|------------------|------------------|
 | BERT-base     | vanilla (our) (avg.)  | 69.75            | 63.46            | 87.21            | 83.72            | 39.17            |
@@ -75,3 +77,11 @@ In short, we need the following environment dependencies:
 - scikit-learn:1.0.1
 - numpy:1.21.4
 - jsonlines:3.0.0
+
+> ## References
+> <p name = "ref1">1. Ren X, Sun X, Wang H, et al. Towards semantics-enhanced pre-training: Can lexicon definitions help learning sentence meanings?[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2021, 35(15): 13736-13744.</p>
+> <p name = "ref2">2. Li J, Tang T, Gong Z, et al. ElitePLM: An Empirical Study on General Language Ability Evaluation of Pretrained Language Models[J]. arXiv preprint arXiv:2205.01523, 2022.</p>
+> <p name = "ref3">3. Chang T Y, Chen Y N. What does this word mean? explaining contextualized embeddings with natural language definition[C]//Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019: 6064-6070.</p>
+> <p name = "ref4">4. Peters M E, Neumann M, Logan R, et al. Knowledge Enhanced Contextual Word Representations[C]//Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.</p>
+> <p name = "ref5">5. Liu X, Zheng Y, Du Z, et al. GPT understands, too[J]. arXiv preprint arXiv:2103.10385, 2021.</p>
+> <p name = "ref6">6. Xiao Liu, Kaixuan Ji, Yicheng Fu, Weng Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. 2022. P-Tuning: Prompt Tuning Can Be Comparable to Fine-tuning Across Scales and Tasks. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 61–68, Dublin, Ireland. Association for Computational Linguistics.</p>
