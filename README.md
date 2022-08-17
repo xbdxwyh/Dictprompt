@@ -9,7 +9,7 @@ The textual semantics contained in the PLM (Pre-trained Language Model) is const
 
 ## Pipeline
 An illustration of DictPrompt pipeline.
-![DictPrompt pipeline](fig/fig2_model_pipeline/fig2_model_pipeline.jpg "An illustration of DictPrompt pipeline.")
+![DictPrompt pipeline](fig/fig2_model_pipeline.jpg "An illustration of DictPrompt pipeline.")
 
 ## Results in our paper:
 |               | Model                 | WiC              | WSC              | SM               | SMR              | HS               |
