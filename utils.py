@@ -144,16 +144,16 @@ def read_HellaSwag_dataset(dataset_path,load_test=False):
 
     
 def tokenize_wsc_function(examples,tokenizer,max_length=256):
-    # 先获取句子
+    # Get the sentence first
     text = examples['text']
     #word1,word2 = examples['target']['span1_text'],examples['target']['span2_text']
-    # 获取两个词语对应的文本
+    # Get the text corresponding to two words
     word1_text = " ".join(text.split(' ')[0:examples['target']['span1_index']+1])
     word2_text = " ".join(text.split(' ')[0:examples['target']['span2_index']+1])
-    # 获取词语的位置
+    # Get the position of the word
     word1_loc = len(tokenizer.encode(word1_text,add_special_tokens=False))
     word2_loc = len(tokenizer.encode(word2_text,add_special_tokens=False))
-    # 进行tokenized 的组合
+    # tokenization
     tokenized_sentence = tokenizer(text,padding='max_length',max_length = max_length,truncation = True)
     tokenized_sentence['word1_locs'] = word1_loc
     tokenized_sentence['word2_locs'] = word2_loc
@@ -161,19 +161,19 @@ def tokenize_wsc_function(examples,tokenizer,max_length=256):
 
 
 def tokenize_wic_function(examples,tokenizer,max_length=512):
-    # 获取词语对应的位置 以及对应的第二句偏移量
+    # Get the position of the corresponding word and the offset of the corresponding second sentence
     word1_loc = len(tokenizer.encode(examples['sentence1'][0:examples['end1']],add_special_tokens=False))
     word2_loc = len(tokenizer.encode(examples['sentence2'][0:examples['end2']],add_special_tokens=False))
     offset = len(tokenizer.encode(examples['sentence1']))
     # tokenizer
     tokenized_sentence = tokenizer(examples['sentence1'],examples['sentence2'],padding='max_length',max_length = max_length,truncation = True)
-    # 获取矩阵
+    # Get the matrix
     loc_word1 = [[0] * max_length]
     loc_word2 = [[0] * max_length]
-    # 将单词对应的位置置为1
+    # Set the corresponding position of the word to 1
     loc_word1[0][word1_loc] = 1
     loc_word2[0][offset+word2_loc] = 1
-    # 修改字典
+    # Modify the dictionary
     tokenized_sentence['word1_locs'] = loc_word1
     tokenized_sentence['word2_locs'] = loc_word2
     #print(tokenized_sentence['input_ids'][word1_loc],tokenized_sentence['input_ids'][offset+word2_loc])

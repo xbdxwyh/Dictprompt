@@ -27,7 +27,6 @@ class T5ForSequenceClassification(T5PreTrainedModel):
         encoder_config.is_encoder_decoder = False
         self.encoder = T5Stack(encoder_config, self.shared)
         
-        # 自己定义的部分（学着BERT那块的）
         self.num_labels = num_labels
         
         self.pooler_dense = nn.Linear(config.d_model, config.d_model)
@@ -106,17 +105,17 @@ class T5ForSequenceClassification(T5PreTrainedModel):
             return_dict=return_dict,
         )
         
-        ## 修改 获取代表句子表征的token对应的Embeddings
+        ## Modify    Get the Embeddings corresponding to the token representing the sentence
         
         ###################
-        pooled_output = encoder_outputs.last_hidden_state[:,0] # 选取对应的表征
+        pooled_output = encoder_outputs.last_hidden_state[:,0] # Select the corresponding embeddings
         
         pooled_output = self.pooler_dense(pooled_output)
         pooled_output = self.pooler_activation(pooled_output)
         
         pooled_output = self.dropout(pooled_output)
         logits = self.classifier(pooled_output)
-        #####################################  BERT 老一套  ############################### 
+        ##################################### same with BERT ############################### 
         loss = None
         if labels is not None:
             if self.config.problem_type is None:
@@ -141,7 +140,7 @@ class T5ForSequenceClassification(T5PreTrainedModel):
                 loss = loss_fct(logits, labels)
 
                 
-        ########## 分类输出 ##########
+        ########## classification output ##########
         return SequenceClassifierOutput(
             loss=loss,
             logits=logits,

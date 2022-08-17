@@ -27,8 +27,6 @@ class T5ForMultipleChoice(T5PreTrainedModel):
         encoder_config.is_encoder_decoder = False
         self.encoder = T5Stack(encoder_config, self.shared)
         
-        # 自己定义的部分（学着BERT那块的）
-        #         
         self.pooler_dense = nn.Linear(config.d_model, config.d_model)
         self.pooler_activation = nn.Tanh()
         
@@ -118,7 +116,7 @@ class T5ForMultipleChoice(T5PreTrainedModel):
         )
 
         ###################
-        pooled_output = outputs.last_hidden_state[:,0] # 选取对应的表征
+        pooled_output = outputs.last_hidden_state[:,0] # Select the corresponding embeddings
         pooled_output = self.pooler_dense(pooled_output)
         pooled_output = self.pooler_activation(pooled_output)
 

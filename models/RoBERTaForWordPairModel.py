@@ -18,7 +18,7 @@ class RobertaForWordPairClassification(RobertaPreTrainedModel):
         self.roberta = RobertaModel(config, add_pooling_layer=False)
 
 
-        # 自定义
+        # Customized
         self.embedding_size = config.hidden_size
         self.linear_diff = torch.nn.Linear(config.hidden_size, 250, bias = True)
         self.linear_seperator = torch.nn.Linear(250, 2, bias = True)
@@ -154,7 +154,7 @@ class RobertaForWordPairEmbeddingsv2(RobertaPreTrainedModel):
         self.config = config
         self.roberta = RobertaModel(config, add_pooling_layer=False)
 
-        # 自定义
+        # Customized
         self.embedding_size = config.hidden_size
         self.linear_diff = torch.nn.Linear(config.hidden_size, 250, bias = True)
         self.linear_seperator = torch.nn.Linear(250, 2, bias = True)
