@@ -67,9 +67,7 @@ Besides comparing the model after DictPrompt tuning with the vanilla models, we 
 Comparable results of proposed DictPrompt with baselines on five downstream tasks. The **bold** represents the best result, and the <ins>underlined</ins> represents the second best result.
 
 ## Requirement
-The file "env_dictprompt.yaml" in this folder contains the specific configuration of our runtime environment.
-
-In short, we need the following environment dependencies:
+You may need the following environment dependencies:
 - python: 3.9.0
 - pytorcch:1.8.2
 - transformers:4.20.0
