@@ -1,5 +1,5 @@
 # DictPrompt
-Implementation of paper: [DictPrompt: Comprehensive Dictionary-integrated Prompt Tuning for Pre-trained Language Model]()
+Implementation of paper: [DictPrompt: Comprehensive Dictionary-integrated Prompt Tuning for Pre-trained Language Model](https://www.sciencedirect.com/science/article/abs/pii/S0950705123003556)
 
 ## TL;DR
 We propose a generalized dictionary-based additional pre-training method using the prompt learning method.
@@ -83,3 +83,14 @@ You may need the following environment dependencies:
 > <p name = "ref4">4. Peters M E, Neumann M, Logan R, et al. Knowledge Enhanced Contextual Word Representations[C]//Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.</p>
 > <p name = "ref5">5. Liu X, Zheng Y, Du Z, et al. GPT understands, too[J]. arXiv preprint arXiv:2103.10385, 2021.</p>
 > <p name = "ref6">6. Xiao Liu, Kaixuan Ji, Yicheng Fu, Weng Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. 2022. P-Tuning: Prompt Tuning Can Be Comparable to Fine-tuning Across Scales and Tasks. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 61–68, Dublin, Ireland. Association for Computational Linguistics.</p>
+
+> Please cite the paper if helps.
+> @article{cao2023dictprompt,
+>   title={DictPrompt: Comprehensive dictionary-integrated prompt tuning for pre-trained language model},
+>   author={Cao, Rui and Wang, Yihao and Gao, Ling and Yang, Meng},
+>   journal={Knowledge-Based Systems},
+>   pages={110605},
+>   year={2023},
+>   publisher={Elsevier}
+> }
+>
