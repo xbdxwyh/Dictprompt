@@ -84,13 +84,15 @@ You may need the following environment dependencies:
 > <p name = "ref5">5. Liu X, Zheng Y, Du Z, et al. GPT understands, too[J]. arXiv preprint arXiv:2103.10385, 2021.</p>
 > <p name = "ref6">6. Xiao Liu, Kaixuan Ji, Yicheng Fu, Weng Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. 2022. P-Tuning: Prompt Tuning Can Be Comparable to Fine-tuning Across Scales and Tasks. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 61–68, Dublin, Ireland. Association for Computational Linguistics.</p>
 
-> Please cite the paper if helps.
-> @article{cao2023dictprompt,
->   title={DictPrompt: Comprehensive dictionary-integrated prompt tuning for pre-trained language model},
->   author={Cao, Rui and Wang, Yihao and Gao, Ling and Yang, Meng},
->   journal={Knowledge-Based Systems},
->   pages={110605},
->   year={2023},
->   publisher={Elsevier}
-> }
->
+## Citiation
+Please cite the paper if helps.
+```
+@article{cao2023dictprompt,
+  title={DictPrompt: Comprehensive dictionary-integrated prompt tuning for pre-trained language model},
+  author={Cao, Rui and Wang, Yihao and Gao, Ling and Yang, Meng},
+  journal={Knowledge-Based Systems},
+  pages={110605},
+  year={2023},
+  publisher={Elsevier}
+}
+```
